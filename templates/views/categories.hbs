@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Feed content</title>
+    <link rel="icon" href="/img/play-button.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <div class="custom-select" style="width:400px;">
+            <select id="category">
+                <option value="0">Select a category:  </option>
+                <option value="1">Comedy</option>
+                <option value="2">Sports</option>
+                <option value="3">Dailylife</option>
+                <option value="4">Nature</option>
+                <option value="5">Vlogs</option>
+
+            </select>
+        </div>
+        <button id="categorySearch">Search</button>
+
+        <pre id="result" class="resultsfield"></pre>
+    </div>
+
+    
+
+    {{>footer}}
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/catergory-menu.js"></script>
+    <script src="/js/categoryFilter.js"></script>
+
+</body>
+
+</html>
+

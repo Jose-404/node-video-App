@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>FreeVideos.js</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/img/play-button.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css">
+                                 
+</head>
+
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <h3>Upload a video file: </h3>
+            <input type="file" name="video" />
+            <h3>Select a category for your video</h3>
+
+            <div class="custom-select" style="width:400px;">
+                <select id="category">
+                    <option value="0">Select a category:  </option>
+                    <option value="1">Comedy</option>
+                    <option value="2">Sports</option>
+                    <option value="3">Daily life/family</option>
+                    <option value="4">Nature</option>
+                    <option value="5">Vlogs</option>
+                </select>
+            </div>
+            <br>
+            <button>Submit</button>
+        </form>   
+
+
+        <!--- <p id="message-1"></p> --->
+        <!--- <p id="message-2"></p> --->
+    </div>
+
+    {{>footer}}
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/catergory-menu.js"></script>
+    
+</body>
+
+</html>

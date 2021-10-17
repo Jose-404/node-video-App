@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Play-video</title>
+    <link rel="icon" href="/img/play-button.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+    </div>
+
+    <form>
+        <input placeholder="Search your video">
+        <button>Search</button>         
+    </form>
+
+    <p id="video-name"></p>
+
+    <div class="embed-responsive embed-responsive-4by3">
+        <p id="tempMessage" class="tempmessage" style="text-align:center"></p>
+        <iframe id="myiframe" type="video/mp4" src="" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="595" height="253"></iframe>
+    </div>
+
+    <div class="rating">
+        <!-- Thumbs up -->
+        <div class="like grow">
+            <i id="positiveReview" class="fa fa-thumbs-up fa-3x like" aria-hidden="true">Like</i>
+        </div>
+        <!-- Thumbs down -->
+        <div class="dislike grow">
+            <i id="negativeReview" class="fa fa-thumbs-down fa-3x like" aria-hidden="true">Dislike</i>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+        <p id="thumbsUpcounter" class="counter" style="background-color: rgb(13, 236, 87);text-align:center"></p>
+        <p id="thumbsDowncounter" class="counter" style="background-color: rgb(252, 85, 85);text-align:center"></p>
+    </div>
+
+<!-- flex-basis: 49.5%; -->
+
+
+    {{>footer}}
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script> 
+
+</body>
+
+</html>
